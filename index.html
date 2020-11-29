@@ -9,23 +9,22 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js?fcbab5806c7de5f7"></script>
   <!-- gif animation library  -->
   <script src="/assets/js/app.js?fcbab5806c7de5f7"></script>
-  <link rel="icon" href="/assets/img/common/favicon.ico">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/common/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/common/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/common/favicon-16x16.png">
+  <link rel="manifest" href="/assets/img/common/site.webmanifest">
+  <link rel="mask-icon" href="/assets/img/common/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body style="margin: 0px; overflow: hidden;">
   <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
     <a-marker preset="custom" type="pattern" url="/assets/img/pattern-ar.patt">
       <!---   model   --->
-      <a-entity geometry="primitive: box;"
+      <a-entity geometry="primitive: plane;"
        material="shader:gif; src:url(/assets/img/kira.gif); color:white; opacity:1"
-       position="0 0 -1"
-       animetion="property: rotation;
-                           from: 0 0 0;
-                           to: 0 0 360;
-                           dir: alternate;
-                           dur: 1000;
-                           loop: true;
-                           easing: easeInOutSine"></a-entity>
+       rotation="90 0 0"></a-entity>
      </a-marker>
      <a-entity camera></a-entity></a-scene>
    </body>
