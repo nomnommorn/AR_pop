@@ -4,9 +4,11 @@
 <head>
   <!-- aframe library(gif animaton lib supports only 0.9.0!)  -->
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+  <!--  to tell an entity to face towards another entity or position (?)
+  <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script> -->
   <!-- arjs library for marker based -->
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <!-- gif animation library  -->
+  <!-- gif animation library -->
   <script src="/assets/js/aframe-gif-shader.js"></script>
   <!-- favicon  -->
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/common/favicon/apple-touch-icon.png">
@@ -29,7 +31,7 @@
       <!---   model   --->
       <a-entity position="0 0 0"
                 rotation="0 0 0"
-                scale="0.5 0.5 0.5"
+                scale="1 1 1"
                 gltf-model="#tree">
                   <!-- <a-animation
                       attribute="rotation"
