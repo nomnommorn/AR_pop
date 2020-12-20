@@ -5,10 +5,9 @@
   <!-- aframe library(gif animaton lib supports only 0.9.0!)  -->
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
   <!-- arjs library  -->
-  <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src='https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js'></script>
   <!-- gif animation library  -->
-  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/aframe-gif-shader.js"></script>
   <!-- favicon  -->
   <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/common/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/common/favicon/favicon-32x32.png">
@@ -30,9 +29,9 @@
       <!---   model   --->
       <a-entity position="0 0 0"
                 rotation="0 0 0"
-                scale="1 1 1"
-                gltf-model="#tree" >
-                  <a-animation
+                scale="0.5 0.5 0.5"
+                gltf-model="#tree">
+                  <!-- <a-animation
                       attribute="rotation"
                       from="90 0 0"
                       to="90 360 0"
@@ -40,7 +39,7 @@
                       dur="4000"
                       repeat="indefinite"
                       easing="ease">
-                    </a-animation>
+                    </a-animation> -->
       </a-entity>
 
        <a-entity geometry="primitive: plane;"
