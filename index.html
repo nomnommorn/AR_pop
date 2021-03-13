@@ -1,55 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<title>!!!AR Pop!!!</title>
+<html lang="ja">
 <head>
-  <!-- aframe library(gif animaton lib supports only 0.9.0!)  -->
-  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-  <!--  to tell an entity to face towards another entity or position (?)
-  <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script> -->
-  <!-- arjs library for marker based -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <!-- gif animation library -->
-  <script src="/assets/js/aframe-gif-shader.js"></script>
-  <!-- favicon  -->
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/common/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/common/favicon/favicon-32x32.png">
-  <link rel="manifest" href="/assets/img/common/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/assets/img/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AR convinience store</title>
+  <!-- Import the component -->
+<script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+></script>
+<script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+></script>
 </head>
-
-<body style="margin: 0px; overflow: hidden;">
-  <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-
-    <a-assets>
-      <a-asset-item id="tree" src="assets/model/Tree/model.gltf"></a-asset-item>
-    </a-assets>
-
-    <a-marker preset="custom" type="pattern" url="/assets/img/pattern-ar.patt">
-
-      <!---   model   --->
-      <a-entity position="0 0 0"
-                rotation="0 0 0"
-                scale="10 10 10"
-                gltf-model="#tree">
-                  <!-- <a-animation
-                      attribute="rotation"
-                      from="90 0 0"
-                      to="90 360 0"
-                      direction="alternate"
-                      dur="4000"
-                      repeat="indefinite"
-                      easing="ease">
-                    </a-animation> -->
-      </a-entity>
-
-       <a-entity geometry="primitive: plane;"
-        material="shader:gif; src:url(/assets/img/kira.gif); color:white; opacity:1"
-        rotation="90 0 0" position="0 2 0">
-      </a-entity>
-
-     </a-marker>
-     <a-entity camera></a-entity></a-scene>
-   </body>
- </html>
+<body>
+    <model-viewer
+      reveal="manual"
+      src="./assets/conviniencestore/conviniencestore.gltf"
+      ios-src="./assets/conviniencestore/conviniencestore.usdz" 
+      poster="./assets/conviniencestore/poster.png"
+      style="width:1920px;height:1080px;" 
+      auto-rotate
+      camera-controls
+      enviroment-image="./assets/conviniencestore/env.jpg"
+      exposure= 1 
+      ar
+      shadow-intensity= 1 
+    >
+    </model-viewer>
+</body>
+</html>
